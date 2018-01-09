@@ -1,0 +1,2 @@
+docker build -t antonipx/utils:latest -f utils.dock .
+docker build -t antonipx/iostat:latest -f iostat.dock .
