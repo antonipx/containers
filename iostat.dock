@@ -1,6 +1,6 @@
 FROM scratch
 ADD iostat /
 ADD tini /
-ENTRYPOINT ["/tini", "--"]
-CMD ["/iostat","-xm","1"]
+ENTRYPOINT ["/tini", "--", "/iostat"]
+CMD ["-xm","1"]
 LABEL maintainer="as@portworx.com"

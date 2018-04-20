@@ -1,0 +1,6 @@
+FROM scratch
+ADD bonnie /
+ADD tini /
+ENTRYPOINT ["/tini", "--", "/bonnie"]
+CMD ["-u", "0:0", "-s", "10g", "-r", "4g", "-d", "/px" ]
+LABEL maintainer="as@portworx.com"

@@ -1,0 +1,7 @@
+FROM scratch
+ADD curl /
+ADD tini /
+COPY etc /etc
+ENTRYPOINT ["/tini", "--","/curl"]
+CMD ["--help"]
+LABEL maintainer="as@portworx.com"

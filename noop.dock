@@ -1,0 +1,5 @@
+FROM scratch
+ADD noop /
+ADD tini /
+ENTRYPOINT ["/tini", "--", "/noop"]
+LABEL maintainer="as@portworx.com"

@@ -1,0 +1,9 @@
+FROM scratch
+ADD ttg /
+ADD tini /
+COPY empty /var
+COPY empty /var/net-snmp
+COPY empty /var/net-snmp/mib_indexes
+ENTRYPOINT ["/tini", "--", "/ttg"]
+CMD ["-h"]
+LABEL maintainer="as@portworx.com"

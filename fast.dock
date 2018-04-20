@@ -1,0 +1,7 @@
+FROM scratch
+ADD fast /
+ADD tini /
+COPY etc /etc
+ENTRYPOINT ["/tini", "--","/fast"]
+CMD ["-D","-s"]
+LABEL maintainer="as@portworx.com"

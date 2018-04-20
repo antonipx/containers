@@ -1,0 +1,5 @@
+FROM ubuntu
+RUN apt -y update
+RUN apt -y install dosemu
+ENTRYPOINT ["/usr/bin/dosemu", "-t"]
+LABEL maintainer="as@portworx.com"
