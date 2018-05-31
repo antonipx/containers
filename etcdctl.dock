@@ -1,0 +1,6 @@
+FROM scratch
+ADD etcdctl /
+ADD tini /
+ENTRYPOINT ["/tini", "--","/etcdctl"]
+CMD ["--help"]
+LABEL maintainer="as@portworx.com"
