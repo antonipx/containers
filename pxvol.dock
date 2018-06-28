@@ -1,0 +1,5 @@
+FROM scratch
+ADD pxvol /
+ADD tini /
+ENTRYPOINT ["/tini", "--","/pxvol"]
+LABEL maintainer="as@portworx.com"

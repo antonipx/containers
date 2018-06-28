@@ -1,0 +1,4 @@
+FROM scratch
+ADD sed /
+ENTRYPOINT ["/sed"]
+LABEL maintainer="as@portworx.com"
