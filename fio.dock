@@ -2,5 +2,5 @@ FROM scratch
 ADD fio /
 ADD tini /
 ENTRYPOINT ["/tini", "--", "/fio"]
-CMD ["--name=px", "--blocksize=64k", "--gtod_reduce=1", "--fsync=0", "--end_fsync=1", "--ioengine=libaio", "--iodepth=128", "--direct=1", "--size=10G", "--rw=write", "--filename=/px/a" ]
+CMD ["--name=px", "--blocksize=64k", "--gtod_reduce=1", "--fsync=0", "--end_fsync=1", "--ioengine=libaio", "--iodepth=256", "--direct=1", "--size=10G", "--rw=write", "--filename=/px/a" ]
 LABEL maintainer="as@portworx.com"

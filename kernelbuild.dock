@@ -1,0 +1,7 @@
+FROM centos
+RUN yum-builddep -y kernel
+RUN yum install -y pesign
+RUN yumdownloader --source kernel
+ADD kernelbuild.sh /
+CMD ["/kernelbuild.sh"]
+LABEL maintainer="as@portworx.com"

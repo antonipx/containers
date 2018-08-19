@@ -1,0 +1,5 @@
+FROM scratch
+ADD eatmem /
+ADD tini /
+ENTRYPOINT ["/tini", "--", "/eatmem"]
+LABEL maintainer="as@portworx.com"
