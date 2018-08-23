@@ -2,5 +2,5 @@ FROM scratch
 ADD ioping /
 ADD tini /
 ENTRYPOINT ["/tini", "--", "/ioping"]
-CMD ["-D", "/px"]
+CMD ["-D", "-WWW", "-G", "/px"]
 LABEL maintainer="as@portworx.com"
